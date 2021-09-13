@@ -1,9 +1,9 @@
-import { exportAllDeclaration } from "@babel/types";
-import { TestScheduler } from "jest";
-import { add, addString } from "./index";
+import { exportAllDeclaration } from '@babel/types';
+import { TestScheduler } from 'jest';
+import { add, addString, toNumber, filterOrange } from './index';
 
-test("add 1 + 2 to equal 3", () => {
-  expect(add(undefined, 2)).toBe(NaN);
+test('add 1 + 2 to equal 3', () => {
+	expect(add(undefined, 2)).toBe(NaN);
 });
 
 //Task01
@@ -13,19 +13,35 @@ test("add 1 + 2 to equal 3", () => {
 ・aが1、bが1の時-1が返る
 */
 
-describe("addString", () => {
-  test("add a + b to equal ab", () => {
-    expect(addString("a", "b")).toMatch("ab");
-  });
+describe('addString', () => {
+	test('add a + b to equal ab', () => {
+		expect(addString('a', 'b')).toMatch('ab');
+	});
 
-  //toMatch toBe
+	//toMatch toBe
 
-  test("add a + 1 to match a1", () => {
-    expect(addString("a", 1)).toBe("a1");
-  });
+	test('add a + 1 to match a1', () => {
+		expect(addString('a', 1)).toBe('a1');
+	});
 
-  // if = false else return -1
-  test("add 1 + 1 return -1", () => {
-    expect(addString(1, 1)).toEqual(-1);
-  });
+	// if = false else return -1
+	test('add 1 + 1 return -1', () => {
+		expect(addString(1, 1)).toEqual(-1);
+	});
 });
+
+describe('toNumber', () => {
+	//Check if it is a number
+	test('check a number', () => {
+		const string = 'string';
+		expect(toNumber(string).toNaN);
+	});
+
+	//Check if it text
+	test('Check if the string has been converted to an integer (decimal)', () => {
+		const string = '123456789';
+		expect(toNumber(string)).toBe(123456789);
+	});
+});
+
+describe('filterOrange', () => {});
