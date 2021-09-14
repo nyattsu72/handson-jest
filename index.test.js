@@ -44,4 +44,11 @@ describe('toNumber', () => {
 	});
 });
 
-describe('filterOrange', () => {});
+describe('filterOrange', () => {
+	test('Check if there is orange text in the array.', () => {
+		const arr = ['orange', 'apple', 'peach'];
+		const argument = 'orange';
+		expect(new Set(arr)).toContain('orange');
+		expect(filterOrange(arr, argument)).toContain('orange');
+	});
+});
