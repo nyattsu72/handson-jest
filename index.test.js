@@ -18,8 +18,6 @@ describe('addString', () => {
 		expect(addString('a', 'b')).toMatch('ab');
 	});
 
-	//toMatch toBe
-
 	test('add a + 1 to match a1', () => {
 		expect(addString('a', 1)).toBe('a1');
 	});
