@@ -1,5 +1,3 @@
-import { exportAllDeclaration } from '@babel/types';
-import { TestScheduler } from 'jest';
 import { add, addString, toNumber, filterOrange } from './index';
 
 test('add 1 + 2 to equal 3', () => {
@@ -43,7 +41,7 @@ describe('toNumber', () => {
 });
 
 describe('filterOrange', () => {
-	test('Check if there is orange text in the array.', () => {
+	test('Check if there is "orange element" in the array.', () => {
 		const arr = ['orange', 'apple', 'peach'];
 		const argument = 'orange';
 		expect(new Set(arr)).toContain('orange');
