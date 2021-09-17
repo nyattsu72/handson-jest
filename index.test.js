@@ -17,12 +17,12 @@ describe('addString', () => {
 	});
 
 	test('add a + 1 to match a1', () => {
-		expect(addString('a', 1)).toBe('a1');
+		expect(addString('a', 1)).toMatch('a1');
 	});
 
 	// if = false else return -1
 	test('add 1 + 1 return -1', () => {
-		expect(addString(1, 1)).toEqual(-1);
+		expect(addString(1, 1)).toBe(-1);
 	});
 });
 
