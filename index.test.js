@@ -12,7 +12,7 @@ test('add 1 + 2 to equal 3', () => {
 */
 
 describe('addString', () => {
-	test('add a + b to equal ab', () => {
+	test('add a + b to match ab', () => {
 		expect(addString('a', 'b')).toMatch('ab');
 	});
 
