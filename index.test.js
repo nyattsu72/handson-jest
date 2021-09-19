@@ -43,8 +43,6 @@ describe('toNumber', () => {
 describe('filterOrange', () => {
 	test('Check if there is "orange element" in the array.', () => {
 		const arr = ['orange', 'apple', 'peach'];
-		const argument = 'orange';
-		expect(new Set(arr)).toContain('orange');
-		expect(filterOrange(arr, argument)).toContain('orange');
+		expect(filterOrange(arr)).toStrictEqual['orange'];
 	});
 });
