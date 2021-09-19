@@ -19,10 +19,3 @@ const fruit = ['orange', 'apple', 'peach'];
 export function filterOrange(arr) {
 	return arr.filter((e) => e === 'orange');
 }
-
-// const fruit = ['orange', 'apple', 'peach'];
-// function filterOrange(arr) {
-// 	return arr.filter((e) => e === 'orange');
-// }
-
-// filterOrange(fruit, 'orange');
