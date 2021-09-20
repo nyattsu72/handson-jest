@@ -4,13 +4,6 @@ test('add 1 + 2 to equal 3', () => {
 	expect(add(undefined, 2)).toBe(NaN);
 });
 
-//Task01
-/*
-・aとbが"a"、"b"の時"ab"となる
-・aが"a", bが1の時"a1"が返る
-・aが1、bが1の時-1が返る
-*/
-
 describe('addString', () => {
 	test('add a + b to match ab', () => {
 		expect(addString('a', 'b')).toMatch('ab');
@@ -20,20 +13,17 @@ describe('addString', () => {
 		expect(addString('a', 1)).toMatch('a1');
 	});
 
-	// if = false else return -1
 	test('add 1 + 1 return -1', () => {
 		expect(addString(1, 1)).toBe(-1);
 	});
 });
 
 describe('toNumber', () => {
-	//Check if it is a number
 	test('check a number', () => {
 		const string = 'string';
 		expect(toNumber(string).toNaN);
 	});
 
-	//Check if it text
 	test('Check if the string has been converted to an integer (decimal)', () => {
 		const string = '123456789';
 		expect(toNumber(string)).toBe(123456789);
