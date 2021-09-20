@@ -4,6 +4,12 @@ test('add 1 + 2 to equal 3', () => {
 	expect(add(undefined, 2)).toBe(NaN);
 });
 
+describe('if pass 1, then return 2', () => {
+	test('add 1 + 1 toBe 2', () => {
+		expect(add(1, 1)).toBe(2);
+	});
+});
+
 describe('addString', () => {
 	test('add a + b to match ab', () => {
 		expect(addString('a', 'b')).toMatch('ab');
