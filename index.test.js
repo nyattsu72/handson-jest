@@ -11,16 +11,22 @@ describe('if pass 1, then return 2', () => {
 });
 
 describe('addString', () => {
-	test('add a + b to match ab', () => {
-		expect(addString('a', 'b')).toMatch('ab');
+	describe('If the strings a and b are passed as arguments', () => {
+		test('add a + b to match ab', () => {
+			expect(addString('a', 'b')).toMatch('ab');
+		});
 	});
 
-	test('add a + 1 to match a1', () => {
-		expect(addString('a', 1)).toMatch('a1');
+	describe('If the string a and the number 1 are passed as arguments', () => {
+		test('add a + 1 to match a1', () => {
+			expect(addString('a', 1)).toMatch('a1');
+		});
 	});
 
-	test('add 1 + 1 return -1', () => {
-		expect(addString(1, 1)).toBe(-1);
+	describe('If the number 1 is passed as two arguments', () => {
+		test('add 1 + 1 return -1', () => {
+			expect(addString(1, 1)).toBe(-1);
+		});
 	});
 });
 
